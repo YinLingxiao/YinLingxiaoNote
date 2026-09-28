@@ -1,0 +1,278 @@
+{
+  "main": {
+    "id": "229df7a36ebd2552",
+    "type": "split",
+    "children": [
+      {
+        "id": "acd509ca280c0668",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1e0a1fdd8660013",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数字系统/存储逻辑.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "存储逻辑"
+            }
+          },
+          {
+            "id": "a2893676607f9dca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数据结构/Lesson 01 数据结构与算法基础.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lesson 01 数据结构与算法基础"
+            }
+          },
+          {
+            "id": "1c700df0fd1f72ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数据结构作业/Chapter 1 Assignment.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 1 Assignment"
+            }
+          },
+          {
+            "id": "dead511ff08a7300",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数据结构作业/Chapter 2 Assignment.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 2 Assignment"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4c8bc5815f4a51d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "b6ed137beff5022a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fb64e27cfd52745",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "d308e6447bb605f6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a7df2e244bd22d6d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0d934d62e5927404",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7f08efe83668485",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f542bf3725c01d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python/第二章 流程控制语句.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "10352063247bd392",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Python/第二章 流程控制语句.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "b28d7a89be2fbd6a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "1ce5a8a27399fc0c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "c18f60b30f40e493",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Python/第二章 流程控制语句.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "0fb64e27cfd52745",
+  "lastOpenFiles": [
+    "数据结构作业/Chapter 1 Assignment.md",
+    "数据结构作业/Chapter 2 Assignment.md",
+    "数据结构作业",
+    "数据结构 Lesson 1作业.md",
+    "数据结构/Lesson 01 数据结构与算法基础.md",
+    "数字系统/存储逻辑.md",
+    "数据结构",
+    "计算机组织与结构/Lesson 1.md",
+    "Python/第二章 流程控制语句.md",
+    "Python/第三章 Python的基础结构.md",
+    "博文/moqian-blog/moqian-note.png",
+    "Python/第一章 数据存储与运算.md",
+    "博文/moqian-blog/moqian-blog.png",
+    "博文/moqian-blog/moqian-home.png",
+    "博文/moqian-blog/moqian-home-full.png",
+    "博文/moqian-blog/moqian-home-top.png",
+    "2026-09-16.md",
+    "高等数学/正项级数判别法.md",
+    "高等数学/数项级数的概念.md",
+    "离散数学/第13章 最优化和匹配.md",
+    "数字系统/时序逻辑.md",
+    "高等数学/高等数学下册_公式定理精华总结.md",
+    "高等数学/傅里叶级数.md",
+    "离散数学/第12章 树.md",
+    "离散数学/第14章 环和模算术.md",
+    "高等数学/第二型曲面积分.md",
+    "离散数学/第10章 递推关系.md",
+    "离散数学/第11章 图论简介.md",
+    "高等数学/第二型曲线积分.md",
+    "大学物理/第十一章 光学.md",
+    "高等数学/二重积分的计算.md",
+    "高等数学/第一型曲面积分.md",
+    "高等数学/第一型曲线积分.md",
+    "博文/moqian-blog",
+    "计算机组织与结构",
+    "Python",
+    "高等数学",
+    "离散数学",
+    "数字系统",
+    "大学物理",
+    "C++"
+  ]
+}
