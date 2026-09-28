@@ -1,9 +1,23 @@
-# Question 2
-## 1)
-```C
+---
+tags: [数据结构, 作业, 时间复杂度]
+aliases: [数据结构第一章作业]
+---
+
+# Chapter 1 Assignment（数据结构作业）
+
+> [!abstract] 一句话定位
+> 第一章作业：分析若干循环程序的时间复杂度并用实测运行时间验证，用二分查找求解 `a[i] == i` 问题，以及比较函数的渐近增长阶。
+
+---
+
+## Question 2
+
+### （1）
+
+```c
 sum = 0; // 执行一次
 for(i = 0 ;i < n ;i++){ // 执行 n 次
-	sum ++ //执行 n 次
+    sum++; // 执行 n 次
 }
 ```
 
@@ -15,8 +29,9 @@ $$T(n) = 2n+1=O(n)$$
 | ---- | --------- | ---------- | ---------- | ---------- |
 | 运行时间 | 5.902ms   | 9.606ms    | 18.951ms   | 41.761ms   |
 
-## 2）
-```C
+### （2）
+
+```c
 sum = 0; // 1
 for (i = 0; i < n; i++) // n
     for (j = 0; j < n; j++) // n
@@ -26,116 +41,143 @@ for (i = 0; i < n; i++) // n
 $$T(n) = 2n\times n+1=2n^2+1=O(n^2)$$
 运行时间：
 
-
 | n的值  | 2,000   | 4,000    | 8,000    | 16,000    |
 | ---- | ------- | -------- | -------- | --------- |
 | 运行时间 | 2.493ms | 10.814ms | 45.467ms | 181.208ms |
-## 3）
-```C
+
+### （3）
+
+```c
 sum = 0; // 1
 for (i = 0; i < n; i++) // n
     for (j = 0; j < n * n; j++) // n * n
         sum++; // n * n
 ```
+
 $$T(n) = 2n\times n^2 + 1=2n^3+1=O(n^3)$$
 运行时间：
-
 
 | n的值  | 160     | 320      | 640       | 1280       |
 | ---- | ------- | -------- | --------- | ---------- |
 | 运行时间 | 2.456ms | 19.172ms | 159.919ms | 1270.578ms |
-## 4)
-```C
+
+### （4）
+
+```c
 sum = 0; // 1
 for (i = 0; i < n; i++) // n
     for (j = 0; j < i; j++) // i
         sum++;//i
 ```
-$$T(n)=1+\frac{(1+n)\times n}{2}\times 2=1+n+n^2=O(n^2)$$
-运行时间：
 
+$$T(n)=1+2\times\frac{n(n-1)}{2}=n^2-n+1=O(n^2)$$
+
+> [!note] 审校
+> 内层 `j < i` 在第 $i$ 轮执行 $i$ 次，总计 $0+1+\cdots+(n-1)=\frac{n(n-1)}{2}$ 次（原稿写成了 $\frac{n(n+1)}{2}$），量级仍为 $O(n^2)$，结论不变。
+
+运行时间：
 
 | n的值  | 3,000   | 6,000    | 12,000   | 24,000    |
 | ---- | ------- | -------- | -------- | --------- |
 | 运行时间 | 2.387ms | 10.481ms | 45.261ms | 190.620ms |
-## 5）
-```C
+
+### （5）
+
+```c
 sum = 0; // 1
 for( i=0; i<n; i++ ) // n
-	for( j=0; j<i*i; j++ ) // i*i
-		for( k=0; k<j; k++ ) // j
-			sum++;// j
+    for( j=0; j<i*i; j++ ) // i*i
+        for( k=0; k<j; k++ ) // j
+            sum++;// j
 ```
-$$T(n)=O(n^5)$$
+
+$$T(n)\approx\sum_{i=0}^{n-1}\sum_{j=0}^{i^2-1}j\approx\sum_{i=0}^{n-1}\frac{i^4}{2}=O(n^5)$$
 
 运行时间：
-
 
 | n的值  | 40      | 80        | 160        |
 | ---- | ------- | --------- | ---------- |
 | 运行时间 | 6.131ms | 190.083ms | 6020.718ms |
-## 6)
-```C
+
+### （6）
+
+```c
 sum = 0; // 1
 for(i = 1; i < n; i++) // n
-    for(j = 1; j < i*i; j++) // i*i 
+    for(j = 1; j < i*i; j++) // i*i
         if(j % i == 0)
-            for(k = 0; k < j; k++) // i
-                sum++;// i
+            for(k = 0; k < j; k++) // j 次（满足条件的 j 只有 i-1 个）
+                sum++;
 ```
 
-$$T(n)=O(n^4)$$
+$$T(n)\approx\sum_{i=1}^{n-1}\Big(\underbrace{i^2}_{\text{if 判断}}+\sum_{m=1}^{i-1}mi\Big)\approx\sum_{i=1}^{n-1}\frac{i^3}{2}=O(n^4)$$
 运行时间：
-
 
 | n的值  | 100     | 200       | 400        |
 | ---- | ------- | --------- | ---------- |
 | 运行时间 | 6.970ms | 109.323ms | 1686.687ms |
-# Question 3
-我选择使用**二分查找**
-已知数组`a[n]`严格递增，且均为整数：
-$$a[1]<a[2]<a[3]<···<a[n]$$
-现采用二分查找，算法如下：
-指定一指针$mid$,$mid = \frac{n}{2}$
+
+## Question 3
+
+我选择使用**二分查找**。
+
+已知数组 `a[0..n-1]` 严格递增，且均为整数，判断是否存在下标 $i$ 使 `a[i] == i`：
+$$a[0]<a[1]<a[2]<\cdots<a[n-1]$$
+由于元素是**严格递增的整数**，有 $a[i+1]\ge a[i]+1$，所以 $a[i]-i$ 单调不减，可以二分。取中点 $mid=\lfloor(left+right)/2\rfloor$：
 
 | 中间元素          | 操作         |
 | ------------- | ---------- |
 | $a_{mid}=mid$ | 找到了，返回 YES |
 | $a_{mid}<mid$ | 在右半部分继续查找  |
 | $a_{mid}>mid$ | 在左半部分继续查找  |
+
 程序实现如下：
-```C++
+
+```cpp
 bool binary_search(int a[], int n){
-	int mid = (n - 1) / 2;
-	int left = 0, right = n - 1;
-	while(left <= right){
-		if(a[mid] == mid){
-			return true;
-		}
-		else if(a[mid] < mid){
-			left = mid + 1;
-			mid = (left + right) / 2;
-		}
-		else if(a[mid] > mid){
-			right = mid - 1;
-			mid = (left + right) / 2;
-		}
-	}
-	return false;
+    int mid = (n - 1) / 2;
+    int left = 0, right = n - 1;
+    while(left <= right){
+        if(a[mid] == mid){
+            return true;
+        }
+        else if(a[mid] < mid){
+            left = mid + 1;
+            mid = (left + right) / 2;
+        }
+        else if(a[mid] > mid){
+            right = mid - 1;
+            mid = (left + right) / 2;
+        }
+    }
+    return false;
 }
 
 ```
-时间复杂度：$$O(log\ n)$$
-# Question 4
 
-A. $n log_2\ n = O(n log\ n)$ 
-B. $n+n^2+n^3=O(n^3)$
-C. $24 = O(1)$
-D $n^{0.5} =O(\sqrt n)$ 
-所以
+时间复杂度：$O(\log n)$
+
+## Question 4
+
+- A：$n\log_2 n = O(n\log n)$
+- B：$n+n^2+n^3=O(n^3)$
+- C：$24 = O(1)$
+- D：$n^{0.5} =O(\sqrt n)$
+
+所以增长阶从低到高为
 $$C<D<A<B$$
-# Question 5
-### A. $5n^{\frac{5}{2}}+n^{\frac{2}{5}} = O(n^{\frac{5}{2}})$ 
-### B. $6log_2\ n+9n = O(n)$
-### C. $3n^4+n\ log_2\ n = O(n^4)$
-### D. $5n^2+n^{\frac{3}{2}} = O(n^2)$
+
+## Question 5
+
+- A：$5n^{\frac{5}{2}}+n^{\frac{2}{5}} = O(n^{\frac{5}{2}})$
+- B：$6\log_2 n+9n = O(n)$
+- C：$3n^4+n\log_2 n = O(n^4)$
+- D：$5n^2+n^{\frac{3}{2}} = O(n^2)$
+
+---
+
+## 📎 相关笔记
+
+**课程**：[[00 数据结构索引|数据结构]] ｜ **上一篇**：[[Lesson 01 数据结构与算法基础]] ｜ **下一篇**：[[Chapter 2 Assignment]]
+
+- [[Lesson 01 数据结构与算法基础]] —— 对应讲义：时间复杂度
