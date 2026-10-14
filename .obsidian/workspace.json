@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据结构作业/Chapter 2 Assignment.md",
+                "file": "数据结构/Lesson 03 栈与队列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 2 Assignment"
+              "title": "Lesson 03 栈与队列"
             }
           }
         ],
@@ -231,13 +231,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "0fb64e27cfd52745",
+  "active": "dead511ff08a7300",
   "lastOpenFiles": [
-    "数据结构作业/Chapter 1 Assignment.md",
+    "数据结构/Lesson 01 数据结构与算法基础.md",
+    "数据结构/Lesson 03 栈与队列.md",
     "数据结构作业/Chapter 2 Assignment.md",
+    "数据结构作业/Chapter 1 Assignment.md",
     "数据结构作业",
     "数据结构 Lesson 1作业.md",
-    "数据结构/Lesson 01 数据结构与算法基础.md",
     "数字系统/存储逻辑.md",
     "数据结构",
     "计算机组织与结构/Lesson 1.md",
@@ -265,7 +266,6 @@
     "大学物理/第十一章 光学.md",
     "高等数学/二重积分的计算.md",
     "高等数学/第一型曲面积分.md",
-    "高等数学/第一型曲线积分.md",
     "博文/moqian-blog",
     "计算机组织与结构",
     "Python",
